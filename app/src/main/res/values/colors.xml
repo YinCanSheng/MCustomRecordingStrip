@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="lyrcolorPrimary">#BECCCB</color>
+    <color name="headBack">#E6E6E6</color>
+    <color name="OriginalSing">#464242</color>
+    <color name="RecordDrag">#4DD81B60</color>
+    <color name="Tickmark">#A8ACAB</color>
+</resources>

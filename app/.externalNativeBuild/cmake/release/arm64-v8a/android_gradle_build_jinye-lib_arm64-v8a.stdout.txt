@@ -1,0 +1,9 @@
+[1/2] Building CXX object CMakeFiles/jinye-lib.dir/native-lib.cpp.o
+D:/chenhong/Study/android/demo/JiDub/app/src/main/cpp/native-lib.cpp:23:12: warning: expression result unused [-Wunused-value]
+        mX + mT;
+        ~~ ^ ~~
+D:/chenhong/Study/android/demo/JiDub/app/src/main/cpp/native-lib.cpp:25:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+[2/2] Linking CXX shared library D:\chenhong\Study\android\demo\JiDub\app\src\main\jniLibs\arm64-v8a\libjinye-lib.so

@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "jinye.demo.jidub"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                /*指定生成输出的abi架构类型 armeabi-v7a兼容armeabi*/
+                abiFilters 'x86','x86_64','armeabi-v7a','arm64-v8a'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    /*指定本地库编译工具 CMark 和之前的Android.mk一样*/
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+    /*指定so打包目录 可以不写 不写要去掉CMake里的set指定生成*/
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['jniLibs']
+        }
+    }
+}
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+/*gradlew makeJar*/
+def _JarName = "Jinyedynamiclyrics";//Jar名字
+def _JarVersion = "_V1.0";//Jar版本
+def _JarPath = "$projectDir/libs"; //生成jar包的位置 这里是项目的libs目录
+def zipFile = file('build/intermediates/packaged-classes/release/classes.jar'); //打包的源码
+/*删除已有Jar*/
+task deleteBuild(type: Delete) {
+    delete _JarPath + _JarName + _JarVersion + ".jar"
+}
+
+/*把库打包成jar*/
+task makeJar(type: Jar) {
+    from zipTree(zipFile)//解压源码jar
+    //from fileTree(dir: "src/main", include: "lib/**/*.so") //将so目录打入jar包 必须要放在lib文件夹下
+    baseName = _JarName + _JarVersion//JAR名字
+    destinationDir = file(_JarPath)//指定生成JAR的路径
+
+//    baseName = 'jinyesignal_V1.4'//设置Jar名字
+//    from('build/intermediates/packaged-classes/release/libs/')
+//    include('jinyesignalinglibrary.jar')//把信令so打包
+//    from('build/intermediates/packaged-classes/release/')
+//    include('classes.jar')//把源码打包
+//    into('libs/')//打进jar包后的文件目录build/libs
+//    from fileTree(dir:'src/main/jniLibs',includes:"**/*.so") //将so打入jar包
+//    into('libs')
+
+}
+
+makeJar.dependsOn(deleteBuild, build)
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:gridlayout-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    /*状态栏控制*/
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+
+    /*RxJava*/
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    /*RxAndroid*/
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    /*监听控制 3.0以后主要针对AndroidX更新*/
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0'
+
+    /*权限*/
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    /*传值通知*/
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation project(path: ':dynamiclyrics')
+}
