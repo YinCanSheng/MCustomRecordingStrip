@@ -164,7 +164,6 @@ public class ManyLyricsView extends AbstractLrcView {
   private int mResetDuration = 3000;
 
 
-
   public void setmResetDuration(int mResetDuration) {
     this.mResetDuration = mResetDuration;
   }
@@ -193,8 +192,8 @@ public class ManyLyricsView extends AbstractLrcView {
             invalidateView();
 
             /*松开后继续滑动*/
-            if(mIsAllowLooseSliding){
-              if(mOnScrollingTouchListener!=null){
+            if (mIsAllowLooseSliding) {
+              if (mOnScrollingTouchListener != null) {
                 resume();
                 mOnScrollingTouchListener.toolup();
               }
@@ -1280,103 +1279,8 @@ public class ManyLyricsView extends AbstractLrcView {
     super.onSizeChanged(w, h, oldw, oldh);
     /*获取控件宽*/
     mViewWidth = getWidth();
-    if (mIsRegular) {
-      if (mOriginalText != null && !mOriginalText.isEmpty()) {
-        String[] mTextLine = mOriginalText.split(mRegular);
-        if (mTextLine != null && mTextLine.length > 0) {
-          /*获取使用句号拆分*/
-          LyricsInfo mLyricsInfo = new LyricsInfo();
-          TreeMap<Integer, LyricsLineInfo> mLyricsLineInfoTreeMap = new TreeMap<>();
-          for (int i = 0; i < mTextLine.length; i++) {
-            LyricsLineInfo mLineInfo = new LyricsLineInfo();
-            mLineInfo.setStartTime(0 + i * mPlaySpeed);
-            mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
-            mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
-            mLineInfo.setLineLyrics(mTextLine[i] + mRegular);
-            mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
-            int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
-            /*构造每个字的时间*/
-//      for(int j=0;j<mLineInfo.getLyricsWords().length;j++){
-//        mWordsDisInterval[j]=(mLineInfo.getEndTime()-mLineInfo.getStartTime())/mLineInfo.getLineLyrics().length();
-//      }
-//      Log.e("文本数据", mWordsDisInterval.length + "");
-            mLineInfo.setWordsDisInterval(mWordsDisInterval);
-            //mLineInfo.setWordsDisInterval(LyricsUtils.getWordsDisInterval(mLineInfo, mLineInfo.getLyricsWords()));
-            mLyricsLineInfoTreeMap.put(i, mLineInfo);
-          }
-          mLyricsInfo.setLyricsLineInfoTreeMap(mLyricsLineInfoTreeMap);
 
-          mLyricsInfo.setTitle("今夜犬吠");
-
-          LyricsReader lyricsReader = new LyricsReader();
-          lyricsReader.setLyricsType(mLyricsInfo.getLyricsType());
-          lyricsReader.setLyricsInfo(mLyricsInfo);
-
-          /*设置原始歌词*/
-          lyricsReader.setLrcLineInfos(mLyricsInfo.getLyricsLineInfoTreeMap());
-
-          /*把歌词数据加载到自定义视图*/
-          this.setLyricsReader(lyricsReader);
-        }
-
-      }
-    } else {
-      /*单个汉字的宽度*/
-      float mChineseCharacterWidth = getPaint().measureText("犬");
-      /*每行文字的个数-向下取整*/
-      int mLineTextCount = (int) Math.floor((getmTextMaxWidth() / mChineseCharacterWidth));
-      /*文本总共的行数*/
-      int mTotalTextRows = (int) Math.ceil(mOriginalText.length() / mLineTextCount);
-      if (mOriginalText != null && !mOriginalText.isEmpty()) {
-        //String [] mTextLine=mOriginalText.split(mRegular);
-        if (mLineTextCount > 0 && mTotalTextRows > 0) {
-          /*获取使用句号拆分*/
-          LyricsInfo mLyricsInfo = new LyricsInfo();
-          TreeMap<Integer, LyricsLineInfo> mLyricsLineInfoTreeMap = new TreeMap<>();
-          for (int i = 0; i <= mTotalTextRows; i++) {
-            LyricsLineInfo mLineInfo = new LyricsLineInfo();
-            mLineInfo.setStartTime(0 + i * mPlaySpeed);
-            mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
-
-            mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
-            if (i == mTotalTextRows) {
-              mLineInfo.setLineLyrics(mOriginalText.substring(i * mLineTextCount, mOriginalText.length()));
-            } else {
-              mLineInfo.setLineLyrics(mOriginalText.substring(i * mLineTextCount, (i + 1) * mLineTextCount));
-            }
-
-            mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
-            int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
-            /*构造每个字的时间*/
-//      for(int j=0;j<mLineInfo.getLyricsWords().length;j++){
-//        mWordsDisInterval[j]=(mLineInfo.getEndTime()-mLineInfo.getStartTime())/mLineInfo.getLineLyrics().length();
-//      }
-//      Log.e("文本数据", mWordsDisInterval.length + "");
-            mLineInfo.setWordsDisInterval(mWordsDisInterval);
-            //mLineInfo.setWordsDisInterval(LyricsUtils.getWordsDisInterval(mLineInfo, mLineInfo.getLyricsWords()));
-            mLyricsLineInfoTreeMap.put(i, mLineInfo);
-          }
-          mLyricsInfo.setLyricsLineInfoTreeMap(mLyricsLineInfoTreeMap);
-
-          mLyricsInfo.setTitle("今夜犬吠");
-
-          LyricsReader lyricsReader = new LyricsReader();
-          lyricsReader.setLyricsType(mLyricsInfo.getLyricsType());
-          lyricsReader.setLyricsInfo(mLyricsInfo);
-
-          /*设置原始歌词*/
-          lyricsReader.setLrcLineInfos(mLyricsInfo.getLyricsLineInfoTreeMap());
-
-          /*把歌词数据加载到自定义视图*/
-          this.setLyricsReader(lyricsReader);
-        }
-
-      }
-    }
-
-    if (mOnScrollingTouchListener != null) {
-      mOnScrollingTouchListener.toolBuildDataEnd();
-    }
+    toolChangeData();
   }
 
 
@@ -1385,6 +1289,30 @@ public class ManyLyricsView extends AbstractLrcView {
   /*原始文本*/private String mOriginalText;
   /*正则符号*/private String mRegular;
   /*是否使用正则*/private boolean mIsRegular;
+
+
+  /**
+   * 獲取字符串的寬度
+   *
+   * @return
+   */
+  private float toolGetStrTotalWidth(String mStr) {
+    float mStrTotalWidth = 0;
+    float mChineseCharacterWidth = getPaint().measureText("犬");
+    float mSpaceCharacterWidth = getPaint().measureText("。");
+    //Log.e("分行數據宽度3x", mChineseCharacterWidth + "px");
+    for (int i = 0; i < mStr.length(); i++) {
+      String mChar = mStr.substring(i, i == mStr.length() - 1 ? mStr.length() : i + 1);
+     //Log.e("分行數據宽度3xz", mChar + "px");
+      if (getPaint().measureText(mChar) == mChineseCharacterWidth) {
+        mStrTotalWidth += mChineseCharacterWidth;
+      } else if (getPaint().measureText(mChar) == mSpaceCharacterWidth) {
+        mStrTotalWidth += mSpaceCharacterWidth;
+      }
+    }
+   // Log.e("分行數據宽度3", mStrTotalWidth + "px");
+    return mStrTotalWidth;
+  }
 
   public long toolGetTotalTime() {
     return mTotalTime;
@@ -1406,15 +1334,16 @@ public class ManyLyricsView extends AbstractLrcView {
   /**
    * 设置变速时间
    */
-  public void toolSetVariableSpeed(int mTime){
-    if(!getLrcLineInfos().isEmpty()){
-      int mSize=getLrcLineInfos().size();
-      for(int i=0;i<mSize;i++){
-        getLrcLineInfos().get(i).setStartTime(i*mTime);
+  public void toolSetVariableSpeed(int mTime) {
+    if (!getLrcLineInfos().isEmpty()) {
+      int mSize = getLrcLineInfos().size();
+      for (int i = 0; i < mSize; i++) {
+        getLrcLineInfos().get(i).setStartTime(i * mTime);
         getLrcLineInfos().get(i).setEndTime(getLrcLineInfos().get(i).getStartTime() + mTime);
       }
     }
   }
+
   /**
    * 设置动感文本数据
    */
@@ -1428,6 +1357,223 @@ public class ManyLyricsView extends AbstractLrcView {
     /*然后使用屏幕宽除以单个字宽得到一行要截取多少文字*/
   }
 
+  public void toolChangeData(){
+    //    if (mIsRegular) {
+//      if (mOriginalText != null && !mOriginalText.isEmpty()) {
+//        String[] mTextLine = mOriginalText.split(mRegular);
+//        if (mTextLine != null && mTextLine.length > 0) {
+//          /*获取使用句号拆分*/
+//          LyricsInfo mLyricsInfo = new LyricsInfo();
+//          TreeMap<Integer, LyricsLineInfo> mLyricsLineInfoTreeMap = new TreeMap<>();
+//          for (int i = 0; i < mTextLine.length; i++) {
+//            LyricsLineInfo mLineInfo = new LyricsLineInfo();
+//            mLineInfo.setStartTime(0 + i * mPlaySpeed);
+//            mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+//            mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+//            mLineInfo.setLineLyrics(mTextLine[i] + mRegular);
+//            mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+//            int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+//            /*构造每个字的时间*/
+////      for(int j=0;j<mLineInfo.getLyricsWords().length;j++){
+////        mWordsDisInterval[j]=(mLineInfo.getEndTime()-mLineInfo.getStartTime())/mLineInfo.getLineLyrics().length();
+////      }
+////      Log.e("文本数据", mWordsDisInterval.length + "");
+//            mLineInfo.setWordsDisInterval(mWordsDisInterval);
+//            //mLineInfo.setWordsDisInterval(LyricsUtils.getWordsDisInterval(mLineInfo, mLineInfo.getLyricsWords()));
+//            mLyricsLineInfoTreeMap.put(i, mLineInfo);
+//          }
+//          mLyricsInfo.setLyricsLineInfoTreeMap(mLyricsLineInfoTreeMap);
+//
+//          mLyricsInfo.setTitle("今夜犬吠");
+//
+//          LyricsReader lyricsReader = new LyricsReader();
+//          lyricsReader.setLyricsType(mLyricsInfo.getLyricsType());
+//          lyricsReader.setLyricsInfo(mLyricsInfo);
+//
+//          /*设置原始歌词*/
+//          lyricsReader.setLrcLineInfos(mLyricsInfo.getLyricsLineInfoTreeMap());
+//
+//          /*把歌词数据加载到自定义视图*/
+//          this.setLyricsReader(lyricsReader);
+//        }
+//
+//      }
+//    } else {
+
+    if (mIsRegular) {
+      if (mOriginalText != null && !mOriginalText.isEmpty()) {
+        String mSegmentationStr[] = mOriginalText.split(mRegular);
+        /*单个汉字的宽度*/
+        float mChineseCharacterWidth = getPaint().measureText("犬");
+        float mSpaceCharacterWidth = getPaint().measureText("。");
+       //Log.e("宽度", mChineseCharacterWidth + "/" + mSpaceCharacterWidth);
+        /*充满的一行的话 每行文字的个数-向下取整*/
+        int mLineTextCount = (int) Math.floor((getmTextMaxWidth() / mChineseCharacterWidth));
+        /*文本总共的行数*/
+        int mTotalTextRows = 0;
+
+        float mCharTotalWidth = 0;
+
+        if (mSegmentationStr != null) {
+          int mSize = mSegmentationStr.length;
+          LyricsInfo mLyricsInfo = new LyricsInfo();
+          TreeMap<Integer, LyricsLineInfo> mLyricsLineInfoTreeMap = new TreeMap<>();
+          for (int i = 0; i < mSize; i++) {
+            /*如果是一段 并且少于一行 则设为一行*/
+            if (toolGetStrTotalWidth(mSegmentationStr[i]) <= getmTextMaxWidth()) {
+              LyricsLineInfo mLineInfo = new LyricsLineInfo();
+              mLineInfo.setStartTime(0 + mTotalTextRows * mPlaySpeed);
+              mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+              mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+              mLineInfo.setLineLyrics(mSegmentationStr[i] + mRegular);
+              mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+              int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+              mLineInfo.setWordsDisInterval(mWordsDisInterval);
+              mLyricsLineInfoTreeMap.put(mTotalTextRows, mLineInfo);
+              mTotalTextRows++;
+            } else {
+              /*一段大于一行*/
+              /*一段文本总共的行数*/
+              int mSegmentationTotalTextRows = (int) Math.ceil(mSegmentationStr[i].length() / mLineTextCount);
+              //Log.e("分行數據宽度", mSegmentationStr[i]);
+              StringBuffer mStringBuffer = new StringBuffer();
+              for (int j = 0; j < mSegmentationStr[i].length(); j++) {
+
+                mCharTotalWidth += toolGetStrTotalWidth(mSegmentationStr[i].substring(j, j == mSegmentationStr[i].length() - 1 ? mSegmentationStr[i].length() : j + 1));
+                mStringBuffer.append(mSegmentationStr[i].substring(j, j == mSegmentationStr[i].length() - 1 ? mSegmentationStr[i].length() : j + 1));
+               // Log.e("分行數據宽度1", mCharTotalWidth + "px");
+                if (j == mSegmentationStr[i].length() - 1) {
+                  LyricsLineInfo mLineInfo = new LyricsLineInfo();
+                  mLineInfo.setStartTime(0 + mTotalTextRows * mPlaySpeed);
+                  mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+                  mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+                  String mData = mStringBuffer.toString();
+                  mLineInfo.setLineLyrics(mData+mRegular);
+                  mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+                  int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+                  mLineInfo.setWordsDisInterval(mWordsDisInterval);
+                  mLyricsLineInfoTreeMap.put(mTotalTextRows, mLineInfo);
+                  mTotalTextRows++;
+                  mCharTotalWidth = 0;
+                  mStringBuffer.delete(0, mStringBuffer.length());
+                } else if (mCharTotalWidth >= getmTextMaxWidth() - mSpaceCharacterWidth * 2) {
+                  LyricsLineInfo mLineInfo = new LyricsLineInfo();
+                  mLineInfo.setStartTime(0 + mTotalTextRows * mPlaySpeed);
+                  mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+                  mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+                  String mData = mStringBuffer.toString();
+                  mLineInfo.setLineLyrics(mData);
+                  mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+                  int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+                  mLineInfo.setWordsDisInterval(mWordsDisInterval);
+                  mLyricsLineInfoTreeMap.put(mTotalTextRows, mLineInfo);
+                  mTotalTextRows++;
+                  mCharTotalWidth = 0;
+                  mStringBuffer.delete(0, mStringBuffer.length());
+                }
+              }
+//              for (int j = 0; j <= mSegmentationTotalTextRows; j++) {
+//                LyricsLineInfo mLineInfo = new LyricsLineInfo();
+//                mLineInfo.setStartTime(0 + mTotalTextRows * mPlaySpeed);
+//                mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+//                mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+//                if (j == mSegmentationTotalTextRows) {
+//                  String mStr=mSegmentationStr[i].substring(j * mLineTextCount, mSegmentationStr[i].length())+mRegular;
+////                  if(mStr.length()<mLineTextCount){
+////                    for(int k=0;k<mLineTextCount-mStr.length();k++){
+////                      mStr+="占";
+////                    }
+////                  }
+//                  mLineInfo.setLineLyrics(mStr);
+//                } else {
+//                  mLineInfo.setLineLyrics(mSegmentationStr[i].substring(j * mLineTextCount, (j + 1) * mLineTextCount));
+//                }
+//                mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+//                int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+//                mLineInfo.setWordsDisInterval(mWordsDisInterval);
+//                mLyricsLineInfoTreeMap.put(mTotalTextRows, mLineInfo);
+//                mTotalTextRows++;
+//              }
+
+            }
+
+          }
+          mLyricsInfo.setLyricsLineInfoTreeMap(mLyricsLineInfoTreeMap);
+
+          mLyricsInfo.setTitle("今夜犬吠");
+
+          LyricsReader lyricsReader = new LyricsReader();
+          lyricsReader.setLyricsType(mLyricsInfo.getLyricsType());
+          lyricsReader.setLyricsInfo(mLyricsInfo);
+
+          /*设置原始歌词*/
+          lyricsReader.setLrcLineInfos(mLyricsInfo.getLyricsLineInfoTreeMap());
+
+          /*把歌词数据加载到自定义视图*/
+          this.setLyricsReader(lyricsReader);
+        }
+
+      }
+    }
+
+//      /*单个汉字的宽度*/
+//      float mChineseCharacterWidth = getPaint().measureText("犬");
+//      /*每行文字的个数-向下取整*/
+//      int mLineTextCount = (int) Math.floor((getmTextMaxWidth() / mChineseCharacterWidth));
+//      /*文本总共的行数*/
+//      int mTotalTextRows = (int) Math.ceil(mOriginalText.length() / mLineTextCount);
+//      /**/
+//      if (mOriginalText != null && !mOriginalText.isEmpty()) {
+//        //String [] mTextLine=mOriginalText.split(mRegular);
+//        if (mLineTextCount > 0 && mTotalTextRows > 0) {
+//          /*获取使用句号拆分*/
+//          LyricsInfo mLyricsInfo = new LyricsInfo();
+//          TreeMap<Integer, LyricsLineInfo> mLyricsLineInfoTreeMap = new TreeMap<>();
+//          for (int i = 0; i <= mTotalTextRows; i++) {
+//            LyricsLineInfo mLineInfo = new LyricsLineInfo();
+//            mLineInfo.setStartTime(0 + i * mPlaySpeed);
+//            mLineInfo.setEndTime(mLineInfo.getStartTime() + mPlaySpeed);
+//
+//            mTotalTime += mLineInfo.getEndTime() - mLineInfo.getStartTime();
+//            if (i == mTotalTextRows) {
+//              mLineInfo.setLineLyrics(mOriginalText.substring(i * mLineTextCount, mOriginalText.length()));
+//            } else {
+//              mLineInfo.setLineLyrics(mOriginalText.substring(i * mLineTextCount, (i + 1) * mLineTextCount));
+//            }
+//
+//            mLineInfo.setLyricsWords(LyricsUtils.getLyricsWords(mLineInfo.getLineLyrics()));
+//            int[] mWordsDisInterval = new int[mLineInfo.getLyricsWords().length];
+//            /*构造每个字的时间*/
+////      for(int j=0;j<mLineInfo.getLyricsWords().length;j++){
+////        mWordsDisInterval[j]=(mLineInfo.getEndTime()-mLineInfo.getStartTime())/mLineInfo.getLineLyrics().length();
+////      }
+////      Log.e("文本数据", mWordsDisInterval.length + "");
+//            mLineInfo.setWordsDisInterval(mWordsDisInterval);
+//            //mLineInfo.setWordsDisInterval(LyricsUtils.getWordsDisInterval(mLineInfo, mLineInfo.getLyricsWords()));
+//            mLyricsLineInfoTreeMap.put(i, mLineInfo);
+//          }
+//          mLyricsInfo.setLyricsLineInfoTreeMap(mLyricsLineInfoTreeMap);
+//
+//          mLyricsInfo.setTitle("今夜犬吠");
+//
+//          LyricsReader lyricsReader = new LyricsReader();
+//          lyricsReader.setLyricsType(mLyricsInfo.getLyricsType());
+//          lyricsReader.setLyricsInfo(mLyricsInfo);
+//
+//          /*设置原始歌词*/
+//          lyricsReader.setLrcLineInfos(mLyricsInfo.getLyricsLineInfoTreeMap());
+//
+//          /*把歌词数据加载到自定义视图*/
+//          this.setLyricsReader(lyricsReader);
+//        }
+//
+//      }
+    //}
+
+    if (mOnScrollingTouchListener != null) {
+      mOnScrollingTouchListener.toolBuildDataEnd();
+    }
+  }
   /**
    * 设置歌词解析器
    *

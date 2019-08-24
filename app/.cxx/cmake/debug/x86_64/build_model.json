@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub",
+      "sdkFolder": "D:\\chenhong\\Tools\\sdk\\aSdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app",
+      "makeFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\src\\main\\cpp\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\.cxx",
+      "cxxFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx",
+      "ndkFolder": "D:\\chenhong\\Tools\\sdk\\aSdk\\ndk-bundle",
+      "ndkVersion": "20.0.5594570",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "debug",
+    "soFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\build\\intermediates\\cmake\\debug\\lib",
+    "objFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\build\\intermediates\\cmake\\debug\\obj",
+    "jsonFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug",
+    "gradleBuildOutputFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86_64",
+  "abiPlatformVersion": 18,
+  "cxxBuildFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64",
+  "jsonFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64",
+  "objFolder": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64",
+  "buildCommandFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\build_command.txt",
+  "buildOutputFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\build_output.txt",
+  "modelOutputFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\CMakeLists.txt",
+    "toolchainWrapperFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\build_generation_state.json",
+    "cacheKeyFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_key.json",
+    "compilerCacheUseFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cxx\\debug\\x86_64\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\json_generation_record.json",
+  "compileCommandsJsonFile": "D:\\chenhong\\Study\\android\\demo\\JiDub\\app\\.cxx\\cmake\\debug\\x86_64\\compile_commands.json"
+}

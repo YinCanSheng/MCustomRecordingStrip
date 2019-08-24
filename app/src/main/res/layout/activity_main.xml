@@ -23,17 +23,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread"/>
 
+    <!--正則-->
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/EditText_MainActivity_Regular"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:text=""
+        android:hint="正則"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
     <!--配置控制器-->
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/CheckBox_MainActivity_IndicatorStatus"
         android:layout_width="wrap_content"
-       app:layout_constraintBottom_toBottomOf="@+id/View_MainActivity_HeadBack"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:checked="true"
         android:text="指示条"
         android:textColor="@color/colorAccent"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintBottom_toBottomOf="@+id/View_MainActivity_HeadBack"
+        app:layout_constraintRight_toRightOf="parent"/>
     <!--继续滑动控制-->
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/CheckBox_MainActivity_ContinueSlide"
@@ -87,13 +99,31 @@
         android:id="@+id/View_MainActivity_Dynamiclyrics"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toTopOf="@+id/View_MainActivity_BottomBack"
         app:layout_constraintHeight_percent="0.7"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/View_MainActivity_HeadBack"/>
-
+    <!--中部滚动歌词自定义控件-->
+    <TextView
+        android:id="@+id/TextView_MainActivity_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        android:text="ddfdf"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:gravity="left"
+        app:layout_constraintBottom_toTopOf="@+id/View_MainActivity_BottomBack"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View_MainActivity_HeadBack"/>
     <!--底部背景-->
     <View
         android:id="@+id/View_MainActivity_BottomBack"

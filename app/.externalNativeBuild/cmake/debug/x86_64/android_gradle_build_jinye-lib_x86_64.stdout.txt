@@ -1,2 +1,1 @@
-[1/2] Building CXX object CMakeFiles/jinye-lib.dir/native-lib.cpp.o
-[2/2] Linking CXX shared library D:\chenhong\Study\android\demo\JiDub\app\src\main\jniLibs\x86_64\libjinye-lib.so
+ninja: no work to do.

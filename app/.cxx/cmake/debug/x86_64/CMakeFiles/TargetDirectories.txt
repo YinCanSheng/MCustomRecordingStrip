@@ -1,0 +1,3 @@
+D:/chenhong/Study/android/demo/JiDub/app/.cxx/cmake/debug/x86_64/CMakeFiles/jinye-lib.dir
+D:/chenhong/Study/android/demo/JiDub/app/.cxx/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+D:/chenhong/Study/android/demo/JiDub/app/.cxx/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir

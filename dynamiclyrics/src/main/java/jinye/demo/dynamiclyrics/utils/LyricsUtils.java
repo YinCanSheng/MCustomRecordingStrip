@@ -170,15 +170,15 @@ public class LyricsUtils {
         //设置为上下渐变
         LinearGradient linearGradient = new LinearGradient(x, y - getTextHeight(paint), x, y, paintColor, null, Shader.TileMode.CLAMP);
         paint.setShader(linearGradient);
-        canvas.drawText(text, x, y, paint);
+        canvas.drawText(text, 0, y, paint);
         //设置动感歌词过渡效果
-        canvas.clipRect(x, y - getRealTextHeight(paint), x + hlWidth,
+        canvas.clipRect(0, y - getRealTextHeight(paint), 0 + hlWidth,
                 y + getRealTextHeight(paint));
 
         //设置为上下渐变
-        LinearGradient linearGradientHL = new LinearGradient(x, y - getTextHeight(paint), x, y, paintHLColor, null, Shader.TileMode.CLAMP);
+        LinearGradient linearGradientHL = new LinearGradient(0, y - getTextHeight(paint), 0, y, paintHLColor, null, Shader.TileMode.CLAMP);
         paintHL.setShader(linearGradientHL);
-        canvas.drawText(text, x, y, paintHL);
+        canvas.drawText(text, 0, y, paintHL);
         canvas.restore();
     }
 
@@ -233,7 +233,7 @@ public class LyricsUtils {
         //设置为上下渐变
         LinearGradient linearGradient = new LinearGradient(x, y - getTextHeight(paint), x, y, paintColor, null, Shader.TileMode.CLAMP);
         paint.setShader(linearGradient);
-        canvas.drawText(text, x, y, paint);
+        canvas.drawText(text, 0, y, paint);
     }
 
     /**

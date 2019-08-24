@@ -1,0 +1,4 @@
+# ninja log v5
+10	104	0	clean	fcc34f018406e93e
+8	6528	588352363	CMakeFiles/jinye-lib.dir/native-lib.cpp.o	b5de1ea8e8724bf3
+6531	7492	588352364	D:/chenhong/Study/android/demo/JiDub/app/src/main/jniLibs/arm64-v8a/libjinye-lib.so	b2033daeb79214b6

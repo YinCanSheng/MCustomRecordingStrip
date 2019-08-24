@@ -1,0 +1,8 @@
+Executable : D:\chenhong\Tools\sdk\aSdk\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+--build
+D:\chenhong\Study\android\demo\JiDub\app\.externalNativeBuild\cmake\release\x86
+--target
+jinye-lib
+jvmArgs : 
+
