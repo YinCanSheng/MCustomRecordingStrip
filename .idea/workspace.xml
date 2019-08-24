@@ -78,7 +78,15 @@
     <last-search-timestamp>1565267941922</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e06d30d4-682d-4efe-8ac6-47c089a06324" name="Default Changelist" comment="" />
+    <list default="true" id="e06d30d4-682d-4efe-8ac6-47c089a06324" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_jinye-lib_arm64-v8a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_jinye-lib_arm64-v8a.stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build_jinye-lib_armeabi-v7a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build_jinye-lib_armeabi-v7a.stdout.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,8 +194,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="449" column="46" selection-start-line="449" selection-start-column="46" selection-end-line="449" selection-end-column="46" />
+            <state relative-caret-position="163">
+              <caret line="441" column="7" lean-forward="true" selection-start-line="441" selection-start-column="7" selection-end-line="441" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -348,7 +356,7 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="17" />
     <option name="y" value="38" />
     <option name="width" value="1940" />
@@ -633,7 +641,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.5007542" side_tool="true" weight="0.24061662" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49924585" visible="true" weight="0.3163539" />
@@ -1134,8 +1143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="449" column="46" selection-start-line="449" selection-start-column="46" selection-end-line="449" selection-end-column="46" />
+        <state relative-caret-position="163">
+          <caret line="441" column="7" lean-forward="true" selection-start-line="441" selection-start-column="7" selection-end-line="441" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
