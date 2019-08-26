@@ -10,4 +10,5 @@ Android 自定义动感歌词文本、自定义录音拖动条
 - 支持颜色、大小、间隔设置
 - 具体实现逻辑请看源码MCustomRecordDragView
 - 效果图
+
 <img src="https://github.com/YinCanSheng/MCustomRecordingStrip/blob/master/gif/demo.gif" width=200 height=340>
