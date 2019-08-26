@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
     int paintHLColor = ContextCompat.getColor(this, R.color.colorPrimary);
     makeLyricsView.setPaintHLColor(new int[]{paintHLColor, paintHLColor}, false);
 
+    /*设置高亮位置*/
+    /*mHlPositionOffset 为控件的百分比 0.5 为控件居中 */
+    makeLyricsView.toolSetHlPositionOffset(0.1f);
   }
 
   /*测试文本数据*/

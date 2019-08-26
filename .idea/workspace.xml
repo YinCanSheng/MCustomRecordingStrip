@@ -83,9 +83,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_jinye-lib_arm64-v8a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_jinye-lib_arm64-v8a.stdout.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build_jinye-lib_armeabi-v7a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/android_gradle_build_jinye-lib_armeabi-v7a.stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/json_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/json_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/json_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/json_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,8 +104,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
   <component name="ExternalProjectsData">
@@ -125,36 +134,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="dynamiclyrics" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="dynamiclyrics" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":dynamiclyrics" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":dynamiclyrics" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JiDub" type="f1a62948:ProjectNode" />
-                <item name=":dynamiclyrics" type="2d1252cf:ModuleNode" />
+                <item name="dynamiclyrics" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -168,89 +159,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="441" column="7" lean-forward="true" selection-start-line="441" selection-start-column="7" selection-end-line="441" selection-end-column="7" />
+            <state relative-caret-position="176">
+              <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30536">
-              <caret line="1455" column="35" selection-start-line="1455" selection-start-column="35" selection-end-line="1455" selection-end-column="35" />
+            <state relative-caret-position="81">
+              <caret line="316" column="24" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#39645#39646#0" expanded="true" />
-                <element signature="e#39672#39673#0" expanded="true" />
-                <element signature="e#39748#39749#0" expanded="true" />
-                <element signature="e#39781#39782#0" expanded="true" />
-                <element signature="e#39813#39814#0" expanded="true" />
-                <element signature="e#39840#39841#0" expanded="true" />
-                <element signature="e#52202#52203#0" expanded="true" />
-                <element signature="e#52251#52252#0" expanded="true" />
-                <element signature="e#52748#52749#0" expanded="true" />
-                <element signature="e#52797#52798#0" expanded="true" />
-                <element signature="e#53165#53166#0" expanded="true" />
-                <element signature="e#53200#53201#0" expanded="true" />
-                <element signature="e#53340#53341#0" expanded="true" />
-                <element signature="e#53395#53396#0" expanded="true" />
-                <element signature="e#53540#53541#0" expanded="true" />
-                <element signature="e#53597#53598#0" expanded="true" />
-                <element signature="e#53719#53720#0" expanded="true" />
-                <element signature="e#53787#53788#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/utils/LyricsUtils.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/custom/MCustomRecordDragView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3586">
-              <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -266,10 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toolup</find>
-      <find>mPlayerStartTime</find>
-      <find>mWorkerHandle</find>
-      <find>mRefreshTime</find>
       <find>mWorkerHandler</find>
       <find>mLyricsReader</find>
       <find>mLrcLineInfos</find>
@@ -296,6 +228,10 @@
       <find>而莫</find>
       <find>onDrawLrcView</find>
       <find>果然</find>
+      <find>mCentreY</find>
+      <find>mOffsetY</find>
+      <find>mLyricsLineNum</find>
+      <find>mPaintLine</find>
     </findStrings>
     <replaceStrings>
       <replace>mPaint</replace>
@@ -349,16 +285,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/custom/MCustomRecordDragView.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/utils/LyricsUtils.java" />
-        <option value="$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
-    <option name="y" value="38" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-113" />
+    <option name="y" value="27" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
@@ -368,8 +304,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -416,6 +350,16 @@
             <path>
               <item name="JiDub" type="b2602c69:ProjectViewProjectNode" />
               <item name="JiDub" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jidub" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JiDub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JiDub" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="gif" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -426,16 +370,20 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="209af025" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-08-25T19:04:56.980Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../Tools/sdk/aSdk" />
     <property name="device.picker.selection" value="209af025" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../customize/as/HPLyrics-master" />
-    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.1650165" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
@@ -610,6 +558,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="JiDub:dynamiclyrics [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dynamiclyrics" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -621,6 +588,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JiDub:dynamiclyrics [assemble]" />
         <item itemvalue="Gradle.D:/chenhong/Study/android/demo/JiDub/app [build]" />
         <item itemvalue="Gradle.D:/chenhong/Study/android/demo/JiDub/dynamiclyrics [build]" />
         <item itemvalue="Android JUnit.drawable-xhdpi in app" />
@@ -641,9 +609,41 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
     <layout>
+      <window_info id="Captures" order="0" sideWeight="0.5007542" side_tool="true" weight="0.24061662" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49924585" weight="0.3163539" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.3299866" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="0" />
+      <window_info anchor="bottom" id="Debug with JRebel for Android" order="1" />
+      <window_info anchor="bottom" id="Build" order="2" weight="0.37373737" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.16618498" />
+      <window_info anchor="bottom" id="VersionChecker" order="4" />
+      <window_info anchor="bottom" id="Logcat" order="5" sideWeight="0.83780164" weight="0.5982659" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="JRebel for Android" order="10" />
+      <window_info anchor="bottom" id="Gradle View" order="11" weight="0.32900432" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.1621984" side_tool="true" weight="0.74314576" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32900432" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.32908848" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.2141901" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Captures" order="0" sideWeight="0.5007542" side_tool="true" weight="0.24061662" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49924585" visible="true" weight="0.3163539" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.3299866" />
@@ -655,12 +655,12 @@
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="0" />
       <window_info anchor="bottom" id="Debug with JRebel for Android" order="1" />
-      <window_info anchor="bottom" id="Build" order="2" weight="0.35818714" />
+      <window_info anchor="bottom" id="Build" order="2" visible="true" weight="0.37373737" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.16618498" />
       <window_info anchor="bottom" id="VersionChecker" order="4" />
-      <window_info anchor="bottom" id="Logcat" order="5" sideWeight="0.83780164" weight="0.5994152" />
+      <window_info anchor="bottom" id="Logcat" order="5" sideWeight="0.83780164" weight="0.5982659" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="JRebel for Android" order="10" />
@@ -668,45 +668,13 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.1621984" side_tool="true" weight="0.74314576" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32900432" />
-      <window_info anchor="right" id="Assistant" weight="0.3297587" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.32908848" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.21485944" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" sideWeight="0.5007542" side_tool="true" weight="0.24061662" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49924585" visible="true" weight="0.23493975" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.3299866" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Designer" order="5" />
-      <window_info id="Resources Explorer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="0" />
-      <window_info anchor="bottom" id="Debug with JRebel for Android" order="1" />
-      <window_info anchor="bottom" id="Build" order="2" weight="0.05202312" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.16959064" />
-      <window_info anchor="bottom" id="VersionChecker" order="4" />
-      <window_info anchor="bottom" id="Logcat" order="5" sideWeight="0.83780164" weight="0.38450292" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="JRebel for Android" order="10" />
-      <window_info anchor="bottom" id="Gradle View" order="11" weight="0.32900432" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.1621984" side_tool="true" weight="0.74314576" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32900432" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.32931727" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.21485944" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.2141901" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.3297587" />
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
@@ -1029,43 +997,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamiclyrics/build/outputs/aar/dynamiclyrics-debug.aar">
-      <provider editor-type-id="apk-viewer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/AbstractLrcView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="618" column="29" selection-start-line="618" selection-start-column="29" selection-end-line="618" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8681#8682#0" expanded="true" />
-            <element signature="e#8719#8720#0" expanded="true" />
-            <element signature="e#35803#35804#0" expanded="true" />
-            <element signature="e#35839#35840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamiclyrics/build/outputs/aar/dynamiclyrics-release.aar">
-      <provider editor-type-id="apk-viewer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/custom/MCustomRecordDragView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamiclyrics/build/outputs/aar/dynamiclyrics-debug.aar" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1074,64 +1006,7 @@
       </provider>
       <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30536">
-          <caret line="1455" column="35" selection-start-line="1455" selection-start-column="35" selection-end-line="1455" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#39645#39646#0" expanded="true" />
-            <element signature="e#39672#39673#0" expanded="true" />
-            <element signature="e#39748#39749#0" expanded="true" />
-            <element signature="e#39781#39782#0" expanded="true" />
-            <element signature="e#39813#39814#0" expanded="true" />
-            <element signature="e#39840#39841#0" expanded="true" />
-            <element signature="e#52202#52203#0" expanded="true" />
-            <element signature="e#52251#52252#0" expanded="true" />
-            <element signature="e#52748#52749#0" expanded="true" />
-            <element signature="e#52797#52798#0" expanded="true" />
-            <element signature="e#53165#53166#0" expanded="true" />
-            <element signature="e#53200#53201#0" expanded="true" />
-            <element signature="e#53340#53341#0" expanded="true" />
-            <element signature="e#53395#53396#0" expanded="true" />
-            <element signature="e#53540#53541#0" expanded="true" />
-            <element signature="e#53597#53598#0" expanded="true" />
-            <element signature="e#53719#53720#0" expanded="true" />
-            <element signature="e#53787#53788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/utils/LyricsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3586">
-          <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1141,13 +1016,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="441" column="7" lean-forward="true" selection-start-line="441" selection-start-column="7" selection-end-line="441" selection-end-column="7" />
+        <state relative-caret-position="198">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2398">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/AbstractLrcView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="327" column="45" selection-start-line="327" selection-start-column="45" selection-end-line="327" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8681#8682#0" expanded="true" />
+            <element signature="e#8719#8720#0" expanded="true" />
+            <element signature="e#35803#35804#0" expanded="true" />
+            <element signature="e#35839#35840#0" expanded="true" />
+            <element signature="e#36889#36890#0" expanded="true" />
+            <element signature="e#36926#36927#0" expanded="true" />
+            <element signature="e#37679#37680#0" expanded="true" />
+            <element signature="e#37718#37719#0" expanded="true" />
+            <element signature="e#38128#38129#0" expanded="true" />
+            <element signature="e#38164#38165#0" expanded="true" />
+            <element signature="e#38555#38556#0" expanded="true" />
+            <element signature="e#38586#38587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/utils/LyricsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="255" column="22" selection-start-line="255" selection-start-column="22" selection-end-line="255" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamiclyrics/build/outputs/aar/dynamiclyrics-release.aar">
+      <provider editor-type-id="apk-viewer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamiclyrics/src/main/java/jinye/demo/dynamiclyrics/widget/ManyLyricsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="316" column="24" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/jinye/demo/jidub/custom/MCustomRecordDragView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
         </state>
       </provider>
     </entry>

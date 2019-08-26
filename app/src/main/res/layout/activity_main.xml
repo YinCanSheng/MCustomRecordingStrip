@@ -107,6 +107,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/View_MainActivity_HeadBack"/>
+
     <!--中部滚动歌词自定义控件-->
     <TextView
         android:id="@+id/TextView_MainActivity_text"

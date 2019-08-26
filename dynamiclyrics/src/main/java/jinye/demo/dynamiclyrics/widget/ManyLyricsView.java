@@ -314,6 +314,12 @@ public class ManyLyricsView extends AbstractLrcView {
     updateManyLrcView(playProgress);
   }
 
+  /*高亮位置*/private float mHlPositionOffset=0.5f;
+
+  public void toolSetHlPositionOffset(float mHlPositionOffset){
+
+    this.mHlPositionOffset=mHlPositionOffset;
+  }
   /**
    * 绘画歌词
    *
@@ -338,17 +344,23 @@ public class ManyLyricsView extends AbstractLrcView {
 
 
     //获取中间位置
-    mCentreY = (getHeight() + LyricsUtils.getTextHeight(paintHL)) * 0.5f + getLineAtHeightY(lyricsLineNum) - mOffsetY;
+    mCentreY = (getHeight() + LyricsUtils.getTextHeight(paintHL)) * mHlPositionOffset + getLineAtHeightY(lyricsLineNum) - mOffsetY;
 
+   // mCentreY = 0- mOffsetY;
 
     //画当前行歌词
     //获取分割后的歌词列表
     LyricsLineInfo lyricsLineInfo = lrcLineInfos
         .get(lyricsLineNum);
     List<LyricsLineInfo> splitLyricsLineInfos = lyricsLineInfo.getSplitLyricsLineInfos();
-    float lineBottomY = drawDownLyrics(canvas, paint, paintHL, splitLyricsLineInfos, splitLyricsLineNum, splitLyricsWordIndex, spaceLineHeight, lyricsWordHLTime, mCentreY);
+    float lineBottomY = drawDownLyrics(canvas
+        , paint, paintHL, splitLyricsLineInfos, splitLyricsLineNum
+        , splitLyricsWordIndex, spaceLineHeight, lyricsWordHLTime, mCentreY);
     //画额外歌词
-    lineBottomY = drawDownExtraLyrics(canvas, extraLrcPaint, extraLrcPaintHL, lyricsLineNum, extraSplitLyricsLineNum, extraSplitLyricsWordIndex, extraLrcSpaceLineHeight, lyricsWordHLTime, translateLyricsWordHLTime, lineBottomY);
+    lineBottomY = drawDownExtraLyrics(canvas, extraLrcPaint
+        , extraLrcPaintHL, lyricsLineNum, extraSplitLyricsLineNum
+        , extraSplitLyricsWordIndex, extraLrcSpaceLineHeight
+        , lyricsWordHLTime, translateLyricsWordHLTime, lineBottomY);
 
 
     //画当前行正面的歌词
@@ -657,9 +669,9 @@ public class ManyLyricsView extends AbstractLrcView {
     String timeString = TimeUtils.parseMMSSString(startTime);
     int textHeight = LyricsUtils.getTextHeight(mPaintIndicator);
     float textWidth = LyricsUtils.getTextWidth(mPaintIndicator, timeString);
-    int padding = 10;
+    int padding = 5;
     float textX = padding;
-    float textY = (getHeight() + textHeight) / 2;
+    float textY = (getHeight() + textHeight) / (1/mHlPositionOffset);
     canvas.drawText(timeString, textX, textY, mPaintIndicator);
 
     mPaintPlay.setStyle(Paint.Style.STROKE);
@@ -671,7 +683,7 @@ public class ManyLyricsView extends AbstractLrcView {
     int linePadding = padding * 2;
     int rectR = getWidth() - linePadding;
     int rectL = rectR - circleR * 2;
-    int rectT = getHeight() / 2;
+    int rectT = (int) (getHeight() / (1/mHlPositionOffset));
     int rectB = rectT + circleR * 2;
     mPlayBtnRect.set(rectL - padding, rectT - padding, rectR + padding, rectB + padding);
 
@@ -700,7 +712,7 @@ public class ManyLyricsView extends AbstractLrcView {
 
     //画线
     int lineH = 2;
-    float lineY = (getHeight() - lineH) / 2;
+    float lineY = (getHeight() - lineH) / (1/mHlPositionOffset);
     float lineLeft = textX + textWidth + linePadding;
     float lineR = rectL - linePadding;
     LinearGradient linearGradientHL = new LinearGradient(lineLeft, lineY + lineH, lineR, lineY + lineH, new int[]{ColorUtils.parserColor(mPaintLineColor, 255), ColorUtils.parserColor(mPaintLineColor, 0), ColorUtils.parserColor(mPaintLineColor, 0), ColorUtils.parserColor(mPaintLineColor, 255)}, new float[]{0f, 0.2f, 0.8f, 1f}, Shader.TileMode.CLAMP);
