@@ -1,0 +1,7 @@
+Executable : D:\chenhong\Tools\sdk\aSdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\chenhong\Study\android\demo\JiDub\app\.cxx\cmake\debug\x86
+jinye-lib
+jvmArgs : 
+

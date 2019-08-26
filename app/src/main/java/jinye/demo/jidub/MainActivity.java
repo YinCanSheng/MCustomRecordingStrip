@@ -39,6 +39,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
+import jinye.demo.dynamiclyrics.utils.StringUtils;
 import jinye.demo.dynamiclyrics.widget.AbstractLrcView;
 import jinye.demo.dynamiclyrics.widget.ManyLyricsView;
 import jinye.demo.jidub.custom.MCustomRecordDragView;
@@ -69,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
   /*试听*/private TextView mAuditionTextV;
 
   /*拖动条*/private AppCompatSeekBar mLyricsSeekBar;
-/*正則*/private AppCompatEditText mRegularEditT;
+  /*正則*/private AppCompatEditText mRegularEditT;
+  /*高亮高度*/private AppCompatEditText mHlHeightEditText;
+
   /**/private TextView mTextTextV;
   /*自定义刻度条*/private MCustomRecordDragView mCustomRecordDragView;
   /*指示条时间配置*/private AppCompatCheckBox mIndicatorStatusCheckBox;
@@ -99,8 +102,9 @@ public class MainActivity extends AppCompatActivity {
    */
   private void toolInitView() {
 
-    mTextTextV=findViewById(R.id.TextView_MainActivity_text);
-    mRegularEditT=findViewById(R.id.EditText_MainActivity_Regular);
+    mHlHeightEditText = findViewById(R.id.EditText_MainActivity_HlHeight);
+    mTextTextV = findViewById(R.id.TextView_MainActivity_text);
+    mRegularEditT = findViewById(R.id.EditText_MainActivity_Regular);
     mTextTextV.setText(mDataText);
     makeLyricsView = findViewById(R.id.View_MainActivity_Dynamiclyrics);
     mCustomRecordDragView = findViewById(R.id.View_MainActivity_CustomRecordDrag);
@@ -145,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
   /*测试文本数据*/
   private String mDataText = "北冥有鱼，其名为鲲，鲲之大，不知其几千里也；化而为鸟，其名为鹏，鹏之背，不知其几千里也；怒而飞，其翼若垂天之云，是鸟也，海运则将徙于南冥，南冥者，天池也，《齐谐》者，志怪者也，《谐》之言曰：“鹏之徙于南冥也，水击三千里，抟扶摇而上者九万里，去以六月息者也，”野马也，尘埃也，生物之以息相吹也，天之苍苍，其正色邪？其远而无所至极邪？其视下也，亦若是则已矣，且夫水之积也不厚，则其负大舟也无力。覆杯水于坳堂之上，则芥为之舟，置杯焉则胶，水浅而舟大也，风之积也不厚，则其负大翼也无力，故九万里，则风斯在下矣，而后乃今培风；背负青天，而莫之夭阏者，而后乃今将图南，蜩与学鸠笑之曰：“我决起而飞，抢榆枋而止，时则不至，而控于地而已矣，奚以之九万里而南为？”适莽苍者，三餐而反，腹犹果然；适百里者，宿舂粮；适千里者，三月聚粮，之二虫又何知！小知不及大知，小年不及大年。奚以知其然也？朝菌不知晦朔，蟪蛄不知春秋，此小年也，楚之南有冥灵者，以五百岁为春，五百岁为秋；上古有大椿者，以八千岁为春，八千岁为秋，此大年也，而彭祖乃今以久特闻，众人匹之，不亦悲乎！汤之问棘也是已，穷发之北，有冥海者，天池也，有鱼焉，其广数千里，未有知其修者，其名为鲲，有鸟焉，其名为鹏，背若泰山，翼若垂天之云，抟扶摇羊角而上者九万里，绝云气，负青天，然后图南，且适南冥也，斥鴳笑之曰：“彼且奚适也？我腾跃而上，不过数仞而下，翱翔蓬蒿之间，此亦飞之至也，而彼且奚适也？”此小大之辩也，故夫知效一官，行比一乡，德合一君。而征一国者，其自视也，亦若此矣，而宋荣子犹然笑之，且举世誉之而不加劝，举世非之而不加沮，定乎内外之分，辩乎荣辱之境，斯已矣，彼其于世，未数数然也，虽然，犹有未树也，夫列子御风而行，泠然善也，旬有五日而后反，彼于致福者，未数数然也，此虽免乎行，犹有所待者也，若夫乘天地之正，而御六气之辩，以游无穷者，彼且恶乎待哉？故曰：至人无己，神人无功，圣人无名。";
+
   /**
    * 构建测试数据-歌词
    */
@@ -163,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     makeLyricsView.toolSetSpeed(500);
     /*设置每一行允许绘制的最大宽度/可以不写/默认使用屏幕宽度的2/3宽*/
     //设置歌词的最大宽度
-    int textMaxWidth = (int) (screensWidth-(32 * displayMetrics.density + 0.5f)*2);
+    int textMaxWidth = (int) (screensWidth - (32 * displayMetrics.density + 0.5f) * 2);
     makeLyricsView.setTextMaxWidth(textMaxWidth);
     /*把歌词数据加载到自定义视图/原始文本/正则符号/是否使用正则匹配/如果是false则自动计算文本长度适配控件宽/建议使用false*/
     makeLyricsView.toolSetData(mDataText, "！", true);
@@ -448,13 +453,54 @@ public class MainActivity extends AppCompatActivity {
         .subscribe(new Consumer<CharSequence>() {
           @Override
           public void accept(CharSequence charSequence) throws Exception {
-            if(charSequence.length()>0){
-              makeLyricsView.toolSetData(mDataText,charSequence.toString(),true);
+            if (charSequence.length() > 0) {
+              makeLyricsView.toolSetData(mDataText, charSequence.toString(), true);
               makeLyricsView.toolChangeData();
             }
 
           }
         });
+    /*高亮高度*/
+    RxTextView.textChanges(mHlHeightEditText)
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Consumer<CharSequence>() {
+          @Override
+          public void accept(CharSequence charSequence) throws Exception {
+            if (charSequence.length() > 0 && isNumeric(charSequence.toString())) {
+              /*设置高亮位置*/
+              /*mHlPositionOffset 为控件的百分比 0.5 为控件居中 */
+              makeLyricsView.toolSetHlPositionOffset(Float.valueOf(charSequence.toString()));
+              makeLyricsView.invalidateView();
+            } else {
+              makeLyricsView.toolSetHlPositionOffset(0.5f);
+              makeLyricsView.invalidateView();
+            }
+
+          }
+        });
+  }
+
+
+  /**
+   * 判断是否为数字的方法
+   */
+  public boolean isNumeric(String str) {
+    int temp = 0;
+    for (int i = 0; i < str.length(); i++) {
+      /*允许有一个小数点*/
+      if (str.charAt(i) == '.') {
+        temp++;
+        continue;
+      }
+      /*每一个char都要是数字*/
+      if (!Character.isDigit(str.charAt(i))) {
+        return false;
+      }
+    }
+    if (temp > 1) {
+      return false;
+    }
+    return true;
   }
 
   /*倒计时调度*/private Disposable mRecordCountdownDp;

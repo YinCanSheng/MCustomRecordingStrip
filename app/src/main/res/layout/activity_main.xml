@@ -35,6 +35,18 @@
         android:hint="正則"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/EditText_MainActivity_HlHeight"
+        android:layout_width="wrap_content"
+      app:layout_constraintTop_toTopOf="@+id/EditText_MainActivity_Regular"
+        app:layout_constraintRight_toLeftOf="@+id/EditText_MainActivity_Regular"
+        app:layout_constraintBottom_toBottomOf="@+id/EditText_MainActivity_Regular"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:text="0.5"
+        android:hint="高亮高度"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
     <!--配置控制器-->
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/CheckBox_MainActivity_IndicatorStatus"
